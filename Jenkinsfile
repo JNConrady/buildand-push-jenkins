@@ -1,7 +1,7 @@
 node {
 
    def registryProjet='forma-jnc/'
-   def IMAGE="${registryProjet}app:2.4"
+   def IMAGE="${registryProjet}app:${version}"
 
     stage('Clone') {
           checkout scm
