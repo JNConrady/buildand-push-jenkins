@@ -1,7 +1,7 @@
 node {
 
    def registryProjet='forma-jnc/'
-   def IMAGE="${registryProjet}app:2.4.0"
+   def IMAGE="${registryProjet}app:2.4"
 
     stage('Clone') {
           checkout scm
@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-       docker.withRegistry('https://registry.ludovic.io/' , 'harbor_id_jnc') {
+       docker.withRegistry('https://registry.ludovic.io/' , 'harbor_id_jnc2') {
               img.push 'latest'
               img.push()
           }
